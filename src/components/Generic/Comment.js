@@ -24,7 +24,7 @@ class Comment extends Component {
                         <div className="voteText"> Votes: {comment.likes.length - comment.dislikes.length} </div>
                             {loggedinUser ? null : <div> Log in to Vote </div>}
                             {loggedinUser && !comment.likes.includes(loggedinUser._id) && !comment.dislikes.includes(loggedinUser._id) ?
-                                <div>
+                                <div className="commentVotesButtons">
                                     <Button text="like" onClick={() => commentVote('like', comment._id, index)}/> 
                                     <Button text="unlike" onClick={() => commentVote('dislike', comment._id, index)}/> 
                                 </div>
