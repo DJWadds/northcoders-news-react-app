@@ -72,10 +72,8 @@ class Comments extends Component {
   }
 
   deleteComment = (id) => {
-      console.log(id)
     axios.delete(`https://northcoders-news-app-djwadds.herokuapp.com/api/comments/${id}`)
     .then(data => {
-        console.log(data)
     })
   }
 

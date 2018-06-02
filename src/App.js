@@ -51,11 +51,8 @@ class App extends Component {
   }
 
   login = (username, password) => {
-    if (username.length < 1) {
-      return alert('Please enter your username');
-    }
-    if (password.length < 1) {
-      return alert('Please enter your password');
+    if (username.length < 1 || password.length < 1) {
+      return null;
     }
     axios.get('https://northcoders-news-app-djwadds.herokuapp.com/api/users')
     .then(({data: {users}}) => {
@@ -63,13 +60,13 @@ class App extends Component {
       axios.get(`https://northcoders-news-app-djwadds.herokuapp.com/api/users/${user._id}/login?password=${password}`)
     .then(({data: {users}}) => {
       if (users === undefined) {
-        return alert('Incorrect password')
+        return null
       } else {
         const loggedinUser = users[0]
         this.setState({loggedinUser})
       }
     })
-    .catch(() => alert('problem'))
+    .catch((err) => console.log(err))
     })
   }
 
@@ -83,29 +80,14 @@ class App extends Component {
   }
 
   registerUser = (username, password, confirmPassword, fullName, avatarUrlInput) => {
-    if (username.length < 1) {
-      return alert('Please enter your username');
-    }
-    if (password.length < 1) {
-      return alert('Please enter your password');
-    }
-    if (confirmPassword.length < 1) {
-      return alert('Please confirm your password');
-    }
-    if (fullName.length < 1) {
-      return alert('Please enter your fullName');
-    }
-    if (avatarUrlInput.length < 1) {
-      return alert('Please enter your avatar link');
-    }
-    if (password !== confirmPassword) {
-      return alert('Passwords did not match');
+    if (username.length < 1 || password.length < 1 || confirmPassword.length < 1 || fullName.length < 1 || avatarUrlInput.length < 1 || password !== confirmPassword) {
+      return null
     }
     axios.get('https://northcoders-news-app-djwadds.herokuapp.com/api/users')
     .then(({data: {users}}) => {
       const usernameExists = users.filter(user => user.username === username)
       if (usernameExists.length !== 0) {
-        return alert('Username alread exists')
+        return null
       }
       axios.post('https://northcoders-news-app-djwadds.herokuapp.com/api/users', {username, password, 'name': fullName, 'avatar_url': avatarUrlInput})
       .then(({data}) => {

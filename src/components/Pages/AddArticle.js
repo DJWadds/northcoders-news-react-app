@@ -56,20 +56,19 @@ class AddArticle extends Component {
 
     addArticle= (topicInput, titleInput, bodyInput) => {
         if (topicInput.length < 1 || titleInput.length < 1 || bodyInput.length < 1) {
-            return alert('Articles mus contain a topic, title and body')
+            return null
         }
         const relatedTopic = this.props.topics.filter(topic => topicInput.toLowerCase() === topic.slug)
         if (relatedTopic.length < 1) {
-            return alert('Topic not supported yet, contact admin')
+            return null
         }
         const topicId = relatedTopic[0]._id
         if (topicId === undefined) {
-            return alert('Problem with topic name')
+            return null
         }
         axios.post(`https://northcoders-news-app-djwadds.herokuapp.com/api/topics/${topicId}/articles/${this.props.loggedinUser._id}`, {'title': titleInput, 'body': bodyInput, 'userId': this.props.loggedinUser._id})
         .then(({data: {article}}) => {
             // this.clearInput();
-            console.log(article[0])
             this.props.history.push(`/articles/${article[0]._id}`)
         })
     }

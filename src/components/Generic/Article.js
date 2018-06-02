@@ -24,16 +24,17 @@ class Article extends Component {
                 <div className="articleComments"> <NavLink to={`/articles/${article._id}`}>Comments: {article.comments}</NavLink> </div>
             <div className="articleVotes"> 
                 <div className="votesWord"> Votes: {article.likes.length - article.dislikes.length} </div>
-                    {loggedinUser ? 
-                        !article.likes.includes(loggedinUser._id) ? 
-                            !article.dislikes.includes(loggedinUser._id) ? 
-                                <div>
-                                    <Button text="Like" onClick={() => articleVote('like', article._id, topicIndex, articleIndex)}/> 
-                                    <Button text="Dislike" onClick={() => articleVote('dislike', article._id, topicIndex, articleIndex)}/> 
-                                </div>
-                            : <div> unliked </div>
-                        : <div> Liked </div>
-                    : null}
+                    {loggedinUser ? null : <div> Log in to Vote </div>}
+                    {loggedinUser && !article.likes.includes(loggedinUser._id) && !article.dislikes.includes(loggedinUser._id) ?
+                        <div>
+                            <Button text="Like" onClick={() => articleVote('like', article._id, topicIndex, articleIndex)}/> 
+                            <Button text="Dislike" onClick={() => articleVote('dislike', article._id, topicIndex, articleIndex)}/> 
+                        </div>
+                        : null}
+                    {loggedinUser && article.likes.includes(loggedinUser._id) ? 
+                        <div> Liked </div> : null}
+                    {loggedinUser && article.dislikes.includes(loggedinUser._id) ? 
+                        <div> Disliked </div> : null}
             </div>
         </div>
     </div>
