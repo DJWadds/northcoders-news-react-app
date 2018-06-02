@@ -1,0 +1,102 @@
+#headerLogo {
+    width: 80%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+#header h1 {
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 15px;
+}
+
+#login input {
+    width: 80%;
+    display: block;
+    height: 22px;
+    text-indent: 5px;
+    border: 0.5px solid black;
+    margin: 5px auto;
+}
+
+#login button {
+    width: 40%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.doubleButton {
+    width: 50%;
+    margin: 0 25%;
+}
+
+#loggedinUserLogo {
+    width: 20%;
+    margin: 0 40%;
+}
+
+#loggedinUsername {
+    display: block;
+    margin: auto;
+}
+
+#Loggedin button {
+    display: block;
+    padding: 10px;
+    margin: 10px auto -5px;
+}
+
+@media(min-width: 600px) {
+    #headerItems {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin-bottom: 20px; 
+    }
+
+    #headerItems h1 {
+        display: block;
+        margin: auto;
+        margin-left: 20%;
+        padding-top: 5%;
+    }
+
+    #login input {
+        width: 60%;
+        height: 25px;
+        text-indent: 5px;
+        border: 0.5px solid black;
+        margin: 5px 20%;
+    }
+
+    #loggedinUserLogo {
+        width: 15%;
+        margin: 0 42.5%;
+    }
+}
+
+@media(min-width: 900px) {
+    #headerItems {
+        display: grid;
+        grid-template-columns: 40% 50%;
+    }
+
+    #headerLogo {
+        width: 80%;
+        margin: auto 10%;
+    }
+
+    #headerItems h1 {
+        margin-left: 40%;
+    }
+
+    #header {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #loginStatus {
+        margin-top: 10px; 
+    }
+} 

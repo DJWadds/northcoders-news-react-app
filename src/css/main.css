@@ -1,0 +1,231 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+   color: black;
+   text-decoration: none;
+}
+
+input {
+    font-size: 1em;
+    height: 2em;
+    text-indent: 1em;
+    border: 1.5px solid black;
+    border-radius: 0.8em;
+}
+
+button {
+    min-width: 4em;
+    font-size: 1em;
+    height: 2em;
+    color: white;
+    background-color: darkslateblue;
+    border: 1.5px solid black;
+    border-radius: 0.8em; 
+}
+
+img {
+    max-width: 100%;
+}
+
+/* STANDARD SETTING */
+h1, h2, h3, h4 {
+    text-align: center;
+    padding: 1em;
+}
+
+/* BODY */
+body {
+    background-color: lightgray;
+}
+
+/* APP */
+#app {
+    background-color: lightgray;
+}
+
+/* HEADER */
+#header {
+    padding-bottom: 1em;
+    border-bottom: 1.5px solid black;
+}
+
+#headerLogo {
+    display: block;
+    border-bottom-right-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+#login {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5em;
+    margin: 0 auto;
+}
+
+/* NAV */
+#nav {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5em;
+    border-bottom: 1.5px solid black;
+    padding: 1.2em 0;
+    margin: 0 auto;
+}
+
+#nav div {
+    width: 60%;
+    text-align: center;
+    display: block;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    border-radius: 0.8em;
+    padding: 0.5em 0;
+    margin: 0 auto;
+}
+
+/* USERNAME & IMG */
+.usernameCombo {
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr 6fr;
+    grid-gap: 0.2em;
+    padding: 0.3em;
+}
+
+.statement {
+    display: flex;
+    align-items: center;
+    padding-left: 0.3em;  
+}
+
+.userLogo {
+    width: 40px;
+    border-radius: 1em;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    padding-left: 0.3em;
+}
+
+/* MAIN */
+
+/* FOOTER */
+#footer {
+    border-top: 1.5px solid black;
+}
+/* PAGE */
+/* HOME */
+#home h2 {
+    font-size: 1.8em;
+    text-decoration: underline;
+}
+
+/* ARTICLE */
+.article {
+    width: 90%;
+    display: block;
+    background-color: antiquewhite;
+    border: 1.25px solid black;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 0.8em auto;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+.article p {
+    padding-bottom: 0.8em;
+}
+
+.articleBottom {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+}
+
+.articleComments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.articleVotes {
+    text-align: right;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.articleVotes div {
+    display: flex;
+    align-items: center;
+}
+
+.articleVotes button {
+    color: black;
+    border: 0;
+    background-color: antiquewhite;
+}
+
+/* COMMENTS */
+.commentWithUser {
+    margin: 1em 0;
+}
+
+.comment {
+    width: 80%;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    border-radius: 3em;
+    border-bottom-left-radius: 0;
+    margin: 0.3em auto;
+}
+
+.commentText {
+    padding: 2em 0 0.5em 1.5em;
+}
+
+.commentBottom {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 0.8em;
+}
+
+.commentVotes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+
+.commentVotes div {
+    display: flex;
+    align-items: center;
+}
+
+.usernamecomment {
+    width: 85%;
+    margin: 0.3em auto;
+}
+
+.addComment {
+    width: 80%;
+    margin: 1em auto;
+}
+
+
+
+.addComment button {
+    margin-left: 0.5em;
+}

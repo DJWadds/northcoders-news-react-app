@@ -1,0 +1,13 @@
+#addArticle input {
+    width: 80%;
+    display: block;
+    padding: 5px;
+    margin: 5px auto;
+}
+
+#addArticle button {
+    width: 10%;
+    display: block;
+    padding: 5px;
+    margin: 5px auto;
+}

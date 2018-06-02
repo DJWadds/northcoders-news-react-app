@@ -1,0 +1,57 @@
+.comment {
+    width: 85%;
+    display: block;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px auto; 
+}
+
+.commentUserDetails {
+    display: grid;
+    grid-template-columns: 15% 5% 80%;
+    margin: 5px 0;
+}
+
+.commentUserDetails img {
+    max-width: 30px;
+    display: block;
+    margin: auto;
+}
+
+.commentUserDetails p {
+    display: block;
+    margin: auto;
+}
+
+.commentBottom {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+}
+
+.commentVotes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;  
+}
+
+.voteText {
+    display: block;
+    margin: auto;
+}
+
+.commentBottom button {
+    padding: 5px;
+}
+
+.commentVoteButtons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px; 
+}
+
+.deleteComment {
+    display: block;
+    margin: 0 auto;
+}
+
