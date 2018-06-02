@@ -33,23 +33,6 @@ class Comment extends Component {
                                 <div> Liked </div> : null}
                             {loggedinUser && comment.dislikes.includes(loggedinUser._id) ? 
                                 <div> Disliked </div> : null}
-                        {/* {loggedinUser ? 
-                            !comment.likes.includes(loggedinUser._id) ? 
-                                !comment.dislikes.includes(loggedinUser._id) ? 
-                                    <div className="commentVoteButtons">
-                                        <Button text="like" onClick={() => commentVote('like', comment._id, index)}/> 
-                                        <Button text="unlike" onClick={() => commentVote('dislike', comment._id, index)}/> 
-                                    </div>
-                                : <div> unliked </div>
-                            : <div> Liked </div>
-                        : null}
-                    </div>
-                    <div className="deleteComment">
-                        {loggedinUser ? 
-                            loggedinUser._id === comment.created_by._id ?
-                                <Button text="Delete" onClick={() => deleteComment(comment._id)} /> 
-                            : null
-                        : null} */}
                     </div>
                 </div>
             </div>

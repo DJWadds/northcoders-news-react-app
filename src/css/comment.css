@@ -1,7 +1,9 @@
 .comment {
     width: 85%;
+    color: white;
+    background-color: gray;
     display: block;
-    border: 1px solid black;
+    border-radius: 10px;
     padding: 5px;
     margin: 10px auto; 
 }
