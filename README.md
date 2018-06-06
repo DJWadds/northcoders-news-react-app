@@ -45,9 +45,9 @@ If the comment belongs to you, it will have a delete button, which will allow yo
 ### Step 4 - Deployment
 
 Built with:
-  React
-  Axios
-  HTML
+  React,
+  Axios,
+  HTML,
   CSS
 
 ### Step 4 - Acknowledgments
